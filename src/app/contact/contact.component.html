@@ -1,0 +1,17 @@
+<a routerLink="/">Home</a>
+<div>
+    Please enter your contact details:
+    <br>
+    <form [formGroup]="profileForm">
+        Enter name:
+        <input type="text" formControlName="name"/>
+        <br>
+        Enter number:
+        <input type="text" formControlName="number"/>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Error for formGroup was solved after including ReactiveFormsModule in the app.module -->
+</div> 
+
+
