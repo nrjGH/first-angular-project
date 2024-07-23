@@ -7,8 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { UsersComponent } from './users/users.component';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule } from '@angular/forms';
 import { UserspageComponent } from './userspage/userspage.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,11 +21,14 @@ import { UserspageComponent } from './userspage/userspage.component';
     ContactComponent,
     UsersComponent,
     UserspageComponent,
+    NavbarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [

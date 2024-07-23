@@ -1,4 +1,3 @@
-<a routerLink="/">Home</a>
 <div>
     Please enter your contact details:
     <br>
@@ -6,10 +5,10 @@
         Enter name:
         <input type="text" formControlName="name"/>
         <br>
-        Enter number:
-        <input type="text" formControlName="number"/>
+        Enter email:
+        <input type="email" formControlName="email"/>
         <br>
-        <button type="submit">Submit</button>
+        <button  [disabled]="!profileForm.valid">Submit</button>
     </form>
     <!-- Error for formGroup was solved after including ReactiveFormsModule in the app.module -->
 </div> 

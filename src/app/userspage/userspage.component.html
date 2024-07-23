@@ -1,2 +1,14 @@
-<a routerLink="/" >Home</a>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tr>
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Image</th>
+            </thead>
+        </tr>
+    </table>
+</div>
 <app-users *ngFor="let user of usersList" [userData]="user"></app-users>
