@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-contact',
@@ -7,10 +7,22 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  profileForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
-  });
+  contactForm!: FormGroup;
+
+	constructor(private fb: FormBuilder) { }
+
+	ngOnInit() {
+		this.contactForm = this.fb.group({
+			email: ['', [Validators.required, Validators.email]],
+			name: ['', [Validators.required]]
+		});
+	}
+
+	onSubmit() {
+		if (this.contactForm.valid) {
+			console.log('Form submitted:', this.contactForm.value);
+		}
+	}
 
 
   

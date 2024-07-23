@@ -1,14 +1,17 @@
-<div>
+<div class="contact-container">
     Please enter your contact details:
     <br>
-    <form [formGroup]="profileForm">
+    <form [formGroup]="contactForm">
         Enter name:
         <input type="text" formControlName="name"/>
         <br>
         Enter email:
         <input type="email" formControlName="email"/>
+        <div *ngIf="contactForm.get('email')!.invalid">
+			<small>Please enter a valid email.</small>
+		</div>
         <br>
-        <button  [disabled]="!profileForm.valid">Submit</button>
+        <button>Submit</button>
     </form>
     <!-- Error for formGroup was solved after including ReactiveFormsModule in the app.module -->
 </div> 
