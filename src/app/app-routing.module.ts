@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { TshirtCustomizerComponent } from './tshirt-customizer/tshirt-customizer.component';
 import { ContactComponent } from './contact/contact.component';
-import { UserspageComponent } from './userspage/userspage.component';
-import { LoginComponent } from './login/login.component';
-
-
+import { UsersPageComponent } from './users-page/users-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';  
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'contact', component:ContactComponent},
-  {path:'users', component:UserspageComponent},
-  {path:'login', component:LoginComponent},
-
+  {path:'customizer', component: TshirtCustomizerComponent},
+  {path:'contact', component: ContactComponent},
+  {path:'users', component: UsersPageComponent},
+  {path: 'profile', component:ProfilePageComponent}
 ];
 
 @NgModule({

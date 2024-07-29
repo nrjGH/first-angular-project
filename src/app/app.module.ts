@@ -4,31 +4,33 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
-import { UsersComponent } from './users/users.component';
-import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
-import { UserspageComponent } from './userspage/userspage.component';
+import { TshirtCustomizerComponent } from './tshirt-customizer/tshirt-customizer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
+import { CardComponent } from './card/card.component';
+import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TshirtComponent } from './tshirt/tshirt.component';
+import { UsersPageComponent } from './users-page/users-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent,
-    UsersComponent,
-    UserspageComponent,
+    TshirtCustomizerComponent,
     NavbarComponent,
-    LoginComponent,
+    CardComponent,
+    ContactComponent,
+    TshirtComponent,
+    UsersPageComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

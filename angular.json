@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myapp3": {
+    "custom-tshirt": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/myapp3",
+            "outputPath": "dist/custom-tshirt",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myapp3:build:production"
+              "buildTarget": "custom-tshirt:build:production"
             },
             "development": {
-              "buildTarget": "myapp3:build:development"
+              "buildTarget": "custom-tshirt:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "cf152721-5991-4ada-ba29-5f53575ded99"
+    "analytics": "93f73eba-d3b9-4b54-979c-0abb8ba1d555"
   }
 }
